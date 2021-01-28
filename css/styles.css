@@ -1,0 +1,59 @@
+:root {
+    /* Colors */
+    --black: #000000;
+
+    /* Espacios */
+    --s-10: 10px;
+    --s-5: 5px;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+/*           ------ nav ------              */
+nav {
+    border: 1px solid var(--black);
+    border-radius: var(--s-5);
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--s-10);
+}
+
+/*           ------ container ------              */
+.container {
+    border: 1px solid var(--black);
+    border-radius: var(--s-5);
+    padding: var(--s-10);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+/*           ------ menu ------              */
+.menu {
+    border: 1px solid var(--black);
+    border-radius: var(--s-5);
+    display: block;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 25%;
+    margin-right: var(--s-10);
+}
+
+.btn-menu {
+    border-radius: var(--s-5);
+    width: 80%;
+    margin: var(--s-10) 0 var(--s-10) 0;
+    height: 30px;
+}
+
+.content {
+    border: 1px solid var(--black);
+    border-radius: var(--s-5);
+    width: 72%;
+    margin-left: var(--s-10);
+    padding: var(--s-10);
+}
