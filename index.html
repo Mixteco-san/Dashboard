@@ -5,98 +5,204 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sigma-dashboard</title>
 
+
+    <link href="fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Nav -->
     <nav class="nav">
-        <div class="login">
-            <h1>Sigma</h1>
+        <div class="logo">
+            <a href=""><h1>Sigma</h1></a>
         </div>
 
-        <div class="logo">
-            <img src="" alt="">
-            <h2>Admin</h2>
+        <div class="login">
+            <button>
+                <i class="fas fa-user-cog user-ico"></i>
+                <p>Administrador</p>
+            </button>
         </div>
     </nav>
 
     <!-- container -->
     <div class="container">
         <div class="menu">
-            <button class="btn-menu">Empresa</button>
-            <button class="btn-menu">Vehiculos</button>
-            <button class="btn-menu">Usuarios</button>
-            <button class="btn-menu">SIM</button>
-            <button class="btn-menu">Módulos</button>
-            <button class="btn-menu">Claves</button>
+            <div class="content-btn-m">
+                <button class="btn-menu">Empresa</button>
+                <button class="btn-menu">Vehiculos</button>
+                <button class="btn-menu">Usuarios</button>
+                <button class="btn-menu">SIM</button>
+                <button class="btn-menu">Módulos</button>
+                <button class="btn-menu">Claves</button>
+            </div>
         </div>
 
-        <div class="content empresa">
+        <!-- Vehiculos -->
+        <div class="content active">
             <fieldset class="formulary">
-                <legend>Empresa</legend>
+                <h3>Empresa</h3>
+
+                <hr>
                 
                 <p>
-                    <label for="">Nombre:</label>
+                    <label for="">Nombre</label>
                     <input type="text">
                 </p>
                 <p>
-                    <label for="">Contacto:</label>
+                    <label for="">Contacto</label>
                     <input type="text">
                 </p>
-                <p>
-                    <label for="">Telefono:</label>
-                    <input type="text">    
-                </p>
-                <p>
-                    <label for="">Celular:</label>
-                    <input type="text">    
-                </p>
-                <p>
-                    <label for="">Correo:</label>
-                    <input type="text">
-                </p>
-                <p>
-                    <label for="">RFC:</label>
-                    <input type="text">
-                </p>
-                <p>
-                    <label for="">Calle y numero:</label>
-                    <input type="text">
-                </p>
+
+                <div class="content-pm">
+                    <div class="p-m">
+                        <label for="">Telefono</label>
+                        <input type="text">
+                    </div>
+                    <div class="p-m">
+                        <label for="">Celular</label>
+                        <input type="text">
+                    </div>
+                </div>
+                
+                <div class="content-pm">
+                    <div class="p-m">
+                        <label for="">Correo</label>
+                        <input type="text">
+                    </div>
+                    <div class="p-m">
+                        <label for="">RFC</label>
+                        <input type="text">
+                    </div>
+                </div>
+                
+                <div class="content-pm">
+                    <div class="p-m">
+                        <label for="">Calle</label>
+                        <input type="text">
+                    </div>
+                    <div class="p-m">
+                        <label for="">Numero</label>
+                        <input type="text">
+                    </div>
+                </div>
+                
             </fieldset>
 
             <fieldset class="formulary">
-                <legend>Dirección</legend>
-                
+                <h3>Dirección</h3>
+
+                <hr>
+
+                <div class="content-pm">
+                    <div class="p-m">
+                        <label for="">Colonia</label>
+                        <input type="text">
+                    </div>
+                    <div class="p-m">
+                        <label for="">CP</label>
+                        <input type="text">
+                    </div>
+                </div>
+
                 <p>
-                    <label for="">Colonia:</label>
-                    <input type="text">
-                </p>
-                <p>
-                    <label for="">CP:</label>
-                    <input type="text">
-                </p>
-                <p>
-                    <label for="">Municipio:</label>
+                    <label for="">Municipio</label>
                     <input type="text">    
                 </p>
                 <p>
-                    <label for="">Estado:</label>
+                    <label for="">Estado</label>
                     <input type="text">    
-                </p>
-                <p>
-                    <label for="">Correo:</label>
-                    <input type="text">
-                </p>
-                <p>
-                    <label for="">RFC:</label>
-                    <input type="text">
-                </p>
-                <p>
-                    <label for="">Dirección:</label>
-                    <input type="text">
                 </p>
             </fieldset>
+
+            <div class="contentE-btn">
+                <button class="btn btn-cancel">Cancelar</button>
+                <button class="btn btn-save">Guardar</button>
+            </div>
+
+        </div>
+
+        <!-- Empresa -->
+        <div class="content active">
+            <fieldset class="formulary">
+                <h3>Empresa</h3>
+
+                <hr>
+                
+                <p>
+                    <label for="">Nombre</label>
+                    <input type="text">
+                </p>
+                <p>
+                    <label for="">Contacto</label>
+                    <input type="text">
+                </p>
+
+                <div class="content-pm">
+                    <div class="p-m">
+                        <label for="">Telefono</label>
+                        <input type="text">
+                    </div>
+                    <div class="p-m">
+                        <label for="">Celular</label>
+                        <input type="text">
+                    </div>
+                </div>
+                
+                <div class="content-pm">
+                    <div class="p-m">
+                        <label for="">Correo</label>
+                        <input type="text">
+                    </div>
+                    <div class="p-m">
+                        <label for="">RFC</label>
+                        <input type="text">
+                    </div>
+                </div>
+                
+                <div class="content-pm">
+                    <div class="p-m">
+                        <label for="">Calle</label>
+                        <input type="text">
+                    </div>
+                    <div class="p-m">
+                        <label for="">Numero</label>
+                        <input type="text">
+                    </div>
+                </div>
+                
+            </fieldset>
+
+            <fieldset class="formulary">
+                <h3>Dirección</h3>
+
+                <hr>
+
+                <div class="content-pm">
+                    <div class="p-m">
+                        <label for="">Colonia</label>
+                        <input type="text">
+                    </div>
+                    <div class="p-m">
+                        <label for="">CP</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <p>
+                    <label for="">Municipio</label>
+                    <input type="text">    
+                </p>
+                <p>
+                    <label for="">Estado</label>
+                    <input type="text">    
+                </p>
+            </fieldset>
+
+            <div class="contentE-btn">
+                <button class="btn btn-cancel">Cancelar</button>
+                <button class="btn btn-save">Guardar</button>
+            </div>
+
         </div>
     </div>
 </body>
