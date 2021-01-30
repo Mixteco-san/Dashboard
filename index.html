@@ -28,101 +28,17 @@
     <div class="container">
         <div class="menu">
             <div class="content-btn-m">
-                <button class="btn-menu">Empresa</button>
-                <button class="btn-menu">Vehiculos</button>
-                <button class="btn-menu">Usuarios</button>
-                <button class="btn-menu">SIM</button>
-                <button class="btn-menu">Módulos</button>
-                <button class="btn-menu">Claves</button>
+                <button class="btn-menu" id="btnE">Empresa</button>
+                <button class="btn-menu" id="btnV">Vehiculos</button>
+                <button class="btn-menu" id="btnU">Usuarios</button>
+                <button class="btn-menu" id="btnS">SIM</button>
+                <button class="btn-menu" id="btnM">Módulos</button>
+                <button class="btn-menu" id="btnC">Claves</button>
             </div>
-        </div>
-
-        <!-- Vehiculos -->
-        <div class="content active">
-            <fieldset class="formulary">
-                <h3>Empresa</h3>
-
-                <hr>
-                
-                <p>
-                    <label for="">Nombre</label>
-                    <input type="text">
-                </p>
-                <p>
-                    <label for="">Contacto</label>
-                    <input type="text">
-                </p>
-
-                <div class="content-pm">
-                    <div class="p-m">
-                        <label for="">Telefono</label>
-                        <input type="text">
-                    </div>
-                    <div class="p-m">
-                        <label for="">Celular</label>
-                        <input type="text">
-                    </div>
-                </div>
-                
-                <div class="content-pm">
-                    <div class="p-m">
-                        <label for="">Correo</label>
-                        <input type="text">
-                    </div>
-                    <div class="p-m">
-                        <label for="">RFC</label>
-                        <input type="text">
-                    </div>
-                </div>
-                
-                <div class="content-pm">
-                    <div class="p-m">
-                        <label for="">Calle</label>
-                        <input type="text">
-                    </div>
-                    <div class="p-m">
-                        <label for="">Numero</label>
-                        <input type="text">
-                    </div>
-                </div>
-                
-            </fieldset>
-
-            <fieldset class="formulary">
-                <h3>Dirección</h3>
-
-                <hr>
-
-                <div class="content-pm">
-                    <div class="p-m">
-                        <label for="">Colonia</label>
-                        <input type="text">
-                    </div>
-                    <div class="p-m">
-                        <label for="">CP</label>
-                        <input type="text">
-                    </div>
-                </div>
-
-                <p>
-                    <label for="">Municipio</label>
-                    <input type="text">    
-                </p>
-                <p>
-                    <label for="">Estado</label>
-                    <input type="text">    
-                </p>
-            </fieldset>
-
-            <div class="contentE-btn">
-                <button class="btn btn-cancel">Cancelar</button>
-                <button class="btn btn-save">Guardar</button>
-            </div>
-
         </div>
 
         <!-- Empresa -->
-        <div class="content active">
+        <div class="content off" id="empresa">
             <fieldset class="formulary">
                 <h3>Empresa</h3>
 
@@ -204,6 +120,6 @@
             </div>
 
         </div>
-    </div>
+    <script src="js/efects.js"></script>
 </body>
 </html>
