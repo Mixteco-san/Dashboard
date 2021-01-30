@@ -2,6 +2,7 @@
     /* Colors */
     --black: #000000;
     --white: white;
+    --azulM: #3B3B98;
 
     /* Espacios */
     --s-10: 10px;
@@ -29,19 +30,17 @@ label {
 
 input {
     width: 98%;
-    padding: .3em;
+    padding: .4em;
     box-shadow: var(--shadowL);
     border-radius: var(--s-5);
 }
 
-a {
+a, li {
     text-decoration: none;
     color: var(--black);
+    cursor: var(--pointer);
 }
 
-hr {
-    background: rgba(106, 137, 204,1.0);
-}
 
 .formulary {
     margin: var(--s-10);
@@ -49,11 +48,12 @@ hr {
 }
 
 .btn {
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: 0 40px 0 40px;
     border-radius: var(--s-5);
-    padding: .4em;
+    padding: .4em 1em;
     cursor: var(--pointer);
+    box-shadow: var(--shadowC);
 }
 
 /*           ------ nav ------              */
@@ -85,13 +85,15 @@ nav {
 
 .login .user-ico {
     font-size: 50px;
+    color: var(--azulM);
 }
 
 .login p {
     margin: .5em 0 0 0;
+    color: var(--azulM);
 }
 
-.login button {
+.login button{
     background: transparent;
     border: none;
     padding: .5em;
@@ -122,32 +124,24 @@ nav {
     margin: 0 auto;
     width: 80%;
     padding: 0;;
+    list-style: none;
 }
 
 .btn-menu {
     border-radius: var(--s-5);
-    width: 100%;
-    margin: var(--s-10) 0 var(--s-10) 0;
+    margin: var(--s-10) 0;
     padding: .5em;
-    text-align: start;
-    background: transparent;
-    border: none;
     font-size: 1.2em;
-    cursor: var(--pointer)
 }
 
 /*           ------ content ------              */
-.content.active {
+.content {
     border: 1px solid var(--black);
     border-radius: var(--s-5);
     width: 72%;
     margin-left: var(--s-10);
     padding: var(--s-10);
     box-shadow: var(--shadowC);
-}
-
-.content.off {
-    display: none;
 }
 
 .content-pm {
@@ -173,13 +167,12 @@ nav {
 }
 
 .btn-save {
-    background: green;
+    background: var(--azulM);
     color: var(--white);
 }
 
 .btn-cancel {
-    background: red;
-    color: var(--white);
+    background: #CAD3C8;
 }
 
 
@@ -187,9 +180,10 @@ nav {
 
 .btn-menu:hover {
     background: rgba(130, 204, 221,0.45);
+    font-weight: bold;
 }
 
-.btn-menu:focus {
-    color: rgba(106, 137, 204,1.0);
-    transform: scale(1.1);
+.btn:focus {
+    transform: scale(.9);
+    font-weight: bold;
 }
