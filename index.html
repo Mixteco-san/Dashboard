@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sigma-dashboard</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
     <link href="fontawesome/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Nav -->
-    <nav class="nav container">
+    <nav class="nav">
         <div class="logo">
             <a href=""><h1>Sigma</h1></a>
         </div>
@@ -25,7 +25,7 @@
     </nav>
 
     <!-- container -->
-    <div class="container">
+    <div class="dash-container">
         <div class="menu">
             <ul class="content-btn-m">
                 <li class="btn-menu"><a href="">Empresa</a></li>
@@ -43,75 +43,80 @@
                 <h3>Empresa</h3>
 
                 <hr size="2px" color="#3B3B98">
-                
-                <p>
-                    <label for="">Nombre</label>
-                    <input type="text">
-                </p>
-                <p>
-                    <label for="">Contacto</label>
-                    <input type="text">
-                </p>
 
-                <div class="content-pm">
+                <div class="content-p">
                     <div class="p-m">
+                        <label for="">Nombre</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="p-m p-left">
+                        <label for="">Contacto</label>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="content-p">
+                    <div class="p-s">
                         <label for="">Telefono</label>
-                        <input type="text">
+                        <input type="number">
                     </div>
-                    <div class="p-m">
+
+                    <div class="p-s">
                         <label for="">Celular</label>
-                        <input type="text">
+                        <input type="number">
                     </div>
-                </div>
-                
-                <div class="content-pm">
-                    <div class="p-m">
+
+                    <div class="p-s">
                         <label for="">Correo</label>
-                        <input type="text">
-                    </div>
-                    <div class="p-m">
-                        <label for="">RFC</label>
-                        <input type="text">
+                        <input type="email">
                     </div>
                 </div>
                 
-                <div class="content-pm">
-                    <div class="p-m">
+                
+            </fieldset>
+            
+            <fieldset class="formulary">
+                <h3>Dirección</h3>
+                
+                <hr size="2px" color="#3B3B98">
+                
+                <div class="content-p">
+                    <div class="p-s">
                         <label for="">Calle</label>
                         <input type="text">
                     </div>
-                    <div class="p-m">
-                        <label for="">Numero</label>
-                        <input type="text">
+                    <div class="p-xs">
+                        <label for="">N° interior</label>
+                        <input type="number">
                     </div>
-                </div>
-                
-            </fieldset>
-
-            <fieldset class="formulary">
-                <h3>Dirección</h3>
-
-                <hr size="2px" color="#3B3B98">
-
-                <div class="content-pm">
-                    <div class="p-m">
+                    <div class="p-xs">
+                        <label for="">N° exterior</label>
+                        <input type="number">
+                    </div>
+                    
+                    <div class="p-s">
                         <label for="">Colonia</label>
                         <input type="text">
                     </div>
-                    <div class="p-m">
-                        <label for="">CP</label>
-                        <input type="text">
-                    </div>
                 </div>
 
-                <p>
-                    <label for="">Municipio</label>
-                    <input type="text">    
-                </p>
-                <p>
-                    <label for="">Estado</label>
-                    <input type="text">    
-                </p>
+                <div class="content-p">
+                    <div class="p-s">
+                        <label for="">Municipio</label>
+                        <input type="text">
+                    </div>
+
+                    <div class="p-s">
+                        <label for="">Estado</label>
+                        <input type="number">
+                    </div>
+
+                    <div class="p-s">
+                        <label for="">C.P.</label>
+                        <input type="email">
+                </div>
+
             </fieldset>
 
             <div class="contentE-btn">
