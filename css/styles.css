@@ -115,9 +115,7 @@ nav {
     color: var(--azulM);
 }
 
-.login button{
-    background: transparent;
-    border: none;
+.login{
     padding: .5em;
     cursor: var(--pointer);
 }
