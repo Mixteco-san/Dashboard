@@ -130,6 +130,7 @@ nav {
     height: 100%;
     margin-top: var(--s-10);
     box-shadow: var(--shadowC);
+    border-radius: var(--s-5);
 }
 
 .content-btn-m {

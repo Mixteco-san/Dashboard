@@ -1,16 +1,38 @@
 @media screen and (max-width: 767px) 
 {
+    .dash-container {
+        display: block;
+    }
+
     .menu {
-        width: 35%;
+        display: none;
     }
 
     .content {
-        width: 70%;
+        width: auto;
+    }
+
+    .btn-menu {
+        margin: 1.5em 0;
     }
 
     .content-p {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .contentE-btn {
+        display: block;
+        justify-content: center;
+        margin: 1em auto;
+        width: 80%;
+    }
+
+    .btn {
+        font-size: 1.1em;
+        width: 100%;
+        margin: .7em 0;
+        padding: 1em;
     }
 
     .p-l, .p-m, .p-s, .p20, .p-xs {
@@ -20,12 +42,33 @@
 
 @media screen and (max-width: 480px)
 {
+    nav {
+        width: 100%;
+    }
+    
+    .logo h1 {
+        font-size: 16px;
+    }
+
+    .login {
+        margin: .5em 1em;
+    }
+
+    .login .user-ico {
+        font-size: 25px;
+    }
+
     .menu {
         display: none;
     }
     
     .content {
-        width: 100%;
         margin: auto;
+        padding: 1em;
     }
+}
+
+@media screen and (max-width: 320px)
+{
+    
 }
