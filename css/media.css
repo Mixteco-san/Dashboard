@@ -1,5 +1,25 @@
 @media screen and (max-width: 767px) 
 {
+    .burger-btn {
+        display: block;
+    }
+
+    .burger-btn i {
+        margin: 0 1.5em;
+    }
+
+    .logo {
+        margin: auto;
+    }
+
+    .logo h1 {
+        font-size: 17px;
+    }
+
+    .login .user-ico {
+        font-size: 27px;
+    }
+
     .dash-container {
         display: block;
     }
@@ -19,6 +39,10 @@
     .content-p {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .mt-p {
+        margin-top: 1em;
     }
 
     .contentE-btn {
@@ -46,12 +70,21 @@
         width: 100%;
     }
     
+    .burger-btn i{
+        margin: 0 30px;  
+        font-size: 30px; 
+    }
+
     .logo h1 {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .login {
         margin: .5em 1em;
+    }
+
+    .login p {
+        font-size: 11px;
     }
 
     .login .user-ico {
@@ -65,10 +98,35 @@
     .content {
         margin: auto;
         padding: 1em;
+        font-size: 12px;
     }
 }
 
-@media screen and (max-width: 320px)
+@media screen and (max-width: 400px)
 {
-    
+    .burger-btn i{
+        margin: 0 25px;  
+        font-size: 27px; 
+    }
+
+    .logo h1 {
+        font-size: 14px;
+    }
+
+    .login .user-ico {
+        font-size: 30px;
+        margin: auto 0;
+    }
+
+    .login p {
+        display: none;
+    }
+
+    .content {
+        font-size: 10px;
+    }  
+
+    .content-p input {
+        font-size: 12px;
+    }
 }

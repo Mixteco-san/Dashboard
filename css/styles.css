@@ -81,6 +81,14 @@ nav {
     box-shadow: var(--shadowC);
 }
 
+.burger-btn {
+    display: none;
+}
+
+.burger-btn i {
+    font-size: 40px;
+}
+
 .logo {
     margin: 0 4em;
     border: 1px solid gray;
@@ -131,6 +139,7 @@ nav {
     margin-top: var(--s-10);
     box-shadow: var(--shadowC);
     border-radius: var(--s-5);
+    box-sizing: border-box;
 }
 
 .content-btn-m {
