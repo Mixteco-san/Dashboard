@@ -1,0 +1,31 @@
+@media screen and (max-width: 767px) 
+{
+    .menu {
+        width: 35%;
+    }
+
+    .content {
+        width: 70%;
+    }
+
+    .content-p {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .p-l, .p-m, .p-s, .p20, .p-xs {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px)
+{
+    .menu {
+        display: none;
+    }
+    
+    .content {
+        width: 100%;
+        margin: auto;
+    }
+}
