@@ -140,6 +140,10 @@ nav {
     box-sizing: border-box;
 }
 
+.Xclose-ico {
+    display: none;
+}
+
 .content-btn-m {
     margin: 0 auto;
     width: 80%;
