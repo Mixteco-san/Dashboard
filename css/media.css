@@ -22,9 +22,9 @@
 
     .menu {
         display: flex;
-        width: 100%;
+        width: 97%;
         padding: 1em;
-        margin-top: 5px;
+        margin: 5px auto;
     }
 
     .content-btn-m {
@@ -44,6 +44,7 @@
     .btn-menu a{
         display: flex;
         width: auto;
+        font-size: 16px;
     }
 
     .content {
