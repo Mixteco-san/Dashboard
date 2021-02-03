@@ -1,19 +1,15 @@
 @media screen and (max-width: 767px) 
 {
     .burger-btn {
-        display: block;
-    }
-
-    .burger-btn i {
-        margin: 0 1.5em;
+        display: none;
     }
 
     .logo {
-        margin: auto;
+        margin: auto 3em;
     }
 
     .logo h1 {
-        font-size: 17px;
+        font-size: 20px;
     }
 
     .login .user-ico {
@@ -25,7 +21,29 @@
     }
 
     .menu {
-        display: none;
+        display: flex;
+        width: 100%;
+        padding: 1em;
+        margin-top: 5px;
+    }
+
+    .content-btn-m {
+        display: flex;
+        width: unset;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn-menu {
+        margin: 0 !important;
+        width: unset;
+
+    }
+
+    .btn-menu a{
+        display: flex;
+        width: auto;
     }
 
     .content {
@@ -68,6 +86,10 @@
 {
     nav {
         width: 100%;
+    }
+
+    .burger-btn {
+        display: block;
     }
     
     .burger-btn i{
