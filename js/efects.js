@@ -1,31 +1,29 @@
-const tabletScreen = matchMedia("screen and (max-width: 767px)") //Agregamos nediaquerry
+const phoneScreen = matchMedia("screen and (max-width: 480px)") //Agregamos nediaquerry
 const Menu = document.querySelector('.menu')
-console.log(Menu)
 const btnBurger = document.querySelector('#btn-burger')
-console.log(btnBurger)
+const btnClose = document.querySelector('#btn-close')
 
-tabletScreen.addListener(validationTablet)
+phoneScreen.addListener(validation);
 
-function validationTablet(changeTablet) {
-    if( changeTablet.matches ) {
-        console.log('Estoy cambiando a modo tableta')
-        
-        btnBurger = document.addEventListener('click', muestraoculta)
+function validation(changePhone) {
+    if( changePhone.matches ) {
+        console.log('Estoy cambiando a modo SmartPhone')
+        btnBurger.addEventListener('click', Muestra)
+        btnClose.addEventListener('click', Oculta)
     }
     else {
-        console.log('Pase a otra pantalla')
-        
-        btnBurger = document.addEventListener('click', muestraoculta)
+        console.log('Pase a modo tableta')
+        btnBurger.removeEventListener('click', Muestra)
+        btnClose.removeEventListener('click', Oculta)
     }
 }
 
-validationTablet(tabletScreen)
+validation(phoneScreen)
 
-function muestraoculta() {
-    if(Menu.contains('activo')) {
-        Menu.classList.remove('activo')
-    }
-    else {
-        Menu.classList.add('activo')
-    }
+function Muestra() {
+    Menu.classList.add('activo')
+}
+
+function Oculta() {
+    Menu.classList.remove('activo')
 }
