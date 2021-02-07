@@ -3,14 +3,18 @@
     --black: #000000;
     --white: white;
     --azulM: #1e3799;
+    --gray: #f8f9fa;
+    --grayBorder: #ced4da;
+    --grayBtn: #6c757d;
+    --blueBtn: #0d6efd;
 
     /* Espacios */
     --s-10: 10px;
     --s-5: 5px;
 
     /* Shadows */
-    --shadowC: 3px 3px 5px rgba(200,214,229,.8);
-    --shadowL: 2px 2px 4px rgba(200,214,229,.6);
+    --shadowC: 0px 19px 25px -6px rgba(0,0,0,0.37);
+    --shadowNav: 0px 5px 30px -10px rgba(0,0,0,0.26);
 
     /* mause */
     --pointer: pointer;
@@ -20,15 +24,14 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
-
 
 input {
     width: 100%;
-    padding: .4em;
-    box-shadow: var(--shadowL);
+    padding: .6em;
     border-radius: var(--s-5);
+    border: 2px solid var(--grayBorder);;
 }
 
 a, li {
@@ -44,12 +47,12 @@ a, li {
 }
 
 .btn {
-    font-size: 1.3em;
-    margin: 0 40px 0 40px;
+    font-size: 1.4em;
+    margin: var(--s-10);
     border-radius: var(--s-5);
-    padding: .4em 1em;
+    padding: .65em 1em;
     cursor: var(--pointer);
-    box-shadow: var(--shadowC);
+    width: 50%;;
 }
 
 .p-l {
@@ -78,7 +81,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    box-shadow: var(--shadowC);
+    box-shadow: var(--shadowNav);
+    position: relative;
+    z-index: 2;
 }
 
 .burger-btn {
@@ -87,13 +92,14 @@ nav {
 
 .logo {
     margin: 0 4em;
-    border: 1px solid gray;
+    border: 1px solid var(--grayBtn);
     padding: .8em;
     border-radius: var(--s-5);
 }
 
 .logo h1 {
     margin: 0;
+    color: var(--grayBtn);
 }
 
 .login{
@@ -103,12 +109,12 @@ nav {
 
 .login .user-ico {
     font-size: 30px;
-    color: var(--azulM);
+    color: var(--grayBtn);
 }
 
 .login p {
     margin: .5em 0 0 0;
-    color: var(--azulM);
+    color: var(--grayBtn);
 }
 
 .login{
@@ -123,6 +129,7 @@ nav {
     padding: var(--s-10);
     display: flex;
     box-sizing: border-box;
+    background: var(--gray);
 }
 
 /*           ------ menu ------              */
@@ -131,9 +138,10 @@ nav {
     width: 25%;
     height: 100%;
     margin-top: var(--s-10);
-    box-shadow: var(--shadowC);
+    /* box-shadow: var(--shadowC); */
     border-radius: var(--s-5);
     box-sizing: border-box;
+    background: var(--gray);
 }
 
 .Xclose-ico {
@@ -176,19 +184,18 @@ nav {
 
 .contentE-btn {
     display: flex;
-    justify-content: space-between;
     margin: var(--s-10);
-    width: 70%;
 }
 
 .btn-save {
-    background: linear-gradient(45deg, var(--azulM), #4a69bd);
+    background: var(--blueBtn);
     color: var(--white);
     border: none;
 }
 
 .btn-cancel {
-    background: linear-gradient(45deg, #a5b1c2, #d1d8e0);
+    background: var(--grayBtn);
+    color: var(--white);
     border: none;
 }
 
@@ -196,7 +203,7 @@ nav {
 /*           ------ pseudoclases ------              */
 
 .btn-menu a:hover{
-    background: linear-gradient(90deg, #1e3799, #7e98cf);
+    background: var(--blueBtn);
     font-weight: bold;
     color: var(--white);
 }
