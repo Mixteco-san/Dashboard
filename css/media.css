@@ -114,6 +114,7 @@
         z-index: 3;
         top: 0;
         left: -100vw;
+        margin: 0;
 
         transition: .3s;
     }
