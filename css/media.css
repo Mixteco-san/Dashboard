@@ -22,23 +22,20 @@
 
     .menu {
         display: flex;
-        width: 97%;
+        width: 100%;
         padding: 1em;
-        margin: 5px auto;
     }
 
     .content-btn-m {
         display: flex;
-        width: unset;
-        margin: 0 auto;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .btn-menu {
-        margin: 0 !important;
+        margin: 0 5px !important;
         width: unset;
-
+        margin: 1.5em 0;
     }
 
     .btn-menu a{
@@ -46,13 +43,9 @@
         width: auto;
         font-size: 16px;
     }
-
+    
     .content {
         width: auto;
-    }
-
-    .btn-menu {
-        margin: 1.5em 0;
     }
 
     .content-p {
@@ -66,9 +59,9 @@
 
     .contentE-btn {
         display: block;
+        width: 97%;
         justify-content: center;
         margin: 1em auto;
-        width: 80%;
     }
 
     .btn {
@@ -93,7 +86,7 @@
         display: block;
         margin: 0 30px;  
         font-size: 30px;
-        color:  #1e3799; 
+        color:  #6c757d; 
     }
 
     .logo h1 {
@@ -115,7 +108,8 @@
     .menu {
         display: flex;
         width: 100vw;
-        background-color: rgba(24, 44, 97,.8);
+        height: 100vh;
+        background-color: rgba(13, 110, 253, .85);
         position: fixed;
         z-index: 3;
         top: 0;
@@ -162,9 +156,17 @@
     }
     
     .content {
-        margin: auto;
-        padding: 1em;
-        font-size: 12px;
+        margin: 0;
+        padding: 0;
+        font-size: 14px
+    }
+
+    .formulary {
+        margin: 0;
+    }
+
+    .contentE-btn {
+        width: 100%;
     }
 }
 
@@ -175,10 +177,6 @@
         font-size: 27px; 
     }
 
-    .logo h1 {
-        font-size: 14px;
-    }
-
     .login .user-ico {
         font-size: 30px;
         margin: auto 0;
@@ -186,13 +184,5 @@
 
     .login p {
         display: none;
-    }
-
-    .content {
-        font-size: 10px;
     }  
-
-    .content-p input {
-        font-size: 12px;
-    }
 }
