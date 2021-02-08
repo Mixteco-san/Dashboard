@@ -28,7 +28,7 @@ body {
 }
 
 input {
-    width: 100%;
+    width: -webkit-fill-available;
     padding: .6em;
     border-radius: var(--s-5);
     border: 2px solid var(--grayBorder);;
@@ -44,6 +44,7 @@ a, li {
 .formulary {
     margin: var(--s-10);
     border: none;
+    padding: 0;
 }
 
 .btn {
@@ -56,19 +57,15 @@ a, li {
 }
 
 .p-l {
-    width: 65%;
+    width: 66%;
 }
 
 .p-m {
-    width: 48%;
+    width: 49%;
 }
 
 .p-s {
-    width: 30%;
-}
-
-.p-20 {
-    width: 20%;
+    width: 32%;
 }
 
 .p-xs {
@@ -124,8 +121,7 @@ nav {
 
 /*           ------ container ------              */
 .dash-container {
-    width: 100vw;
-    height: 100%;
+    width: 100vw;;
     padding: var(--s-10);
     display: flex;
     box-sizing: border-box;
@@ -135,8 +131,7 @@ nav {
 /*           ------ menu ------              */
 .menu {
     padding: 30px 0;
-    width: 25%;
-    height: 100%;
+    width: 22.5%;
     margin-top: var(--s-10);
     /* box-shadow: var(--shadowC); */
     border-radius: var(--s-5);
@@ -171,8 +166,7 @@ nav {
 /*           ------ content ------              */
 .content {
     width: 75%;
-    margin-left: var(--s-10);
-    padding: var(--s-10) 20px var(--s-10) var(--s-10);
+    padding: var(--s-10);
 }
 
 .content-p {
@@ -186,6 +180,7 @@ nav {
     display: flex;
     margin: var(--s-10);
 }
+
 
 .btn-save {
     background: var(--blueBtn);
