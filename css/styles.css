@@ -29,6 +29,7 @@ body {
 
 input {
     width: -webkit-fill-available;
+    width: -moz-available;
     padding: .6em;
     border-radius: var(--s-5);
     border: 2px solid var(--grayBorder);;
