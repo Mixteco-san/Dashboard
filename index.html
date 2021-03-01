@@ -13,133 +13,209 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-    <!-- Nav -->
-    <nav class="nav">
-        <i class="fas fa-bars burger-btn" id="btn-burger"></i>
-
-        <div class="logo">
-            <a href=""><h1>Logo</h1></a>
-        </div>
-
-        <div class="login">
-            <i class="fas fa-user-cog user-ico"></i>
-            <p>Administrador</p>
-        </div>
-    </nav>
-
-    <!-- container -->
-    <div class="dash-container">
-        <div class="menu">
-            <i class="fas fa-times Xclose-ico" id="btn-close"></i>
-            <ul class="content-btn-m">
-                <li class="btn-menu">
-                    <a href="">Empresa</a>
-                </li>
-                <li class="btn-menu">
-                    <a href="">Vehiculos</a>
-                </li>
-                <li class="btn-menu">
-                    <a href="">Usuarios</a>
-                </li>
-                <li class="btn-menu">
-                    <a href="">SIM</a>
-                </li>
-                <li class="btn-menu">
-                    <a href="">Mòdulos</a>
-                </li>
-                <li class="btn-menu">
-                    <a href="">Claves</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Empresa -->
-        <div class="content">
-            <fieldset class="formulary">
-                <h3>Empresa</h3>
-
-                <hr size="2px">
-
-                <div class="content-p">
-                    <div class="p-m">
-                        <label for="">Nombre</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="p-m mt-p">
-                        <label for="">Contacto</label>
-                        <input type="text">
-                    </div>
-                </div>
-
-                <div class="content-p">
-                    <div class="p-s">
-                        <label for="">Telefono</label>
-                        <input type="tel">
-                    </div>
-
-                    <div class="p-s mt-p">
-                        <label for="">Celular</label>
-                        <input type="tel">
-                    </div>
-
-                    <div class="p-s mt-p">
-                        <label for="">Correo</label>
-                        <input type="email">
-                    </div>
-                </div>
-                
-                
-            </fieldset>
-            
-            <fieldset class="formulary">
-                <h3>Dirección</h3>
-                
-                <hr size="2px">
-                
-                <div class="content-p">
-                    <div class="p-l">
-                        <label for="">Calle</label>
-                        <input type="text">
-                    </div>
-                    <div class="p-s mt-p">
-                        <label for="">Numero</label>
-                        <input type="number">
-                    </div>
-                </div>
-
-                <div class="content-p">
-                    <div class="p-m">
-                        <label for="">Colonia</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="p-m mt-p">
-                        <label for="">Municipio</label>
-                        <input type="text">
-                    </div>
-                </div>
-
-                <div class="content-p">
-                    <div class="p-l">
-                        <label for="">Estado</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="p-s mt-p">
-                        <label for="">C.P.</label>
-                        <input type="email">
-                </div>
-
-            </fieldset>
-
-            <div class="contentE-btn">
-                <button class="btn btn-save">Guardar</button>
-                <button class="btn btn-cancel">Cancelar</button>
+    <div id="app">
+        <!-- Nav -->
+        <nav class="nav">
+            <i class="fas fa-bars burger-btn" id="btn-burger"></i>
+    
+            <div class="logo">
+                <a href=""><h1>Logo</h1></a>
             </div>
+    
+            <div class="login">
+                <i class="fas fa-user-cog user-ico"></i>
+                <p>Administrador</p>
+            </div>
+        </nav>
+    
+        <!-- container -->
+        <div class="dash-container">
+            <div class="menu">
+                <i class="fas fa-times Xclose-ico" id="btn-close"></i>
+                <ul class="content-btn-m">
+                    <li v-on:click="showForm" class="btn-menu">
+                        <p>Empresa</p>
+                    </li>
+                    <li v-on:click="showForm" class="btn-menu">
+                        <p>Vehiculos</p>
+                    </li>
+                    <li v-on:click="showForm" class="btn-menu">
+                        <p>Usuarios</p>
+                    </li>
+                    <li v-on:click="showForm" class="btn-menu">
+                        <p>SIM</p>
+                    </li>
+                    <li v-on:click="showForm" class="btn-menu">
+                        <p>Mòdulos</p>
+                    </li>
+                    <li v-on:click="showForm" class="btn-menu">
+                        <p>Claves</p>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Empresa -->
+            <!-- <div v-if="show == true" class="content">
+                <fieldset class="formulary">
+                    <h3>Empresa</h3>
+    
+                    <hr size="2px">
+    
+                    <div class="content-p">
+                        <div class="p-m">
+                            <label for="">Nombre</label>
+                            <input class="text-box" type="text">
+                        </div>
+    
+                        <div class="p-m mt-p">
+                            <label for="">Contacto</label>
+                            <input class="text-box" type="text">
+                        </div>
+                    </div>
+    
+                    <div class="content-p">
+                        <div class="p-s">
+                            <label for="">Telefono</label>
+                            <input class="text-box" type="tel">
+                        </div>
+    
+                        <div class="p-s mt-p">
+                            <label for="">Celular</label>
+                            <input class="text-box" type="tel">
+                        </div>
+    
+                        <div class="p-s mt-p">
+                            <label for="">Correo</label>
+                            <input class="text-box" type="email">
+                        </div>
+                    </div>
+                    
+                    
+                </fieldset>
+                
+                <fieldset class="formulary">
+                    <h3>Direccion</h3>
+                    
+                    <hr size="2px">
+                    
+                    <div class="content-p">
+                        <div class="p-l">
+                            <label for="">Calle</label>
+                            <input class="text-box" type="text">
+                        </div>
+                        <div class="p-s mt-p">
+                            <label for="">Numero</label>
+                            <input class="text-box" type="number">
+                        </div>
+                    </div>
+    
+                    <div class="content-p">
+                        <div class="p-m">
+                            <label for="">Colonia</label>
+                            <input class="text-box" type="text">
+                        </div>
+    
+                        <div class="p-m mt-p">
+                            <label for="">Municipio</label>
+                            <input class="text-box" type="text">
+                        </div>
+                    </div>
+    
+                    <div class="content-p">
+                        <div class="p-l">
+                            <label for="">Estado</label>
+                            <input class="text-box" type="text">
+                        </div>
+    
+                        <div class="p-s mt-p">
+                            <label for="">C.P.</label>
+                            <input class="text-box" type="email">
+                    </div>
+    
+                </fieldset>
+    
+                <div class="contentE-btn">
+                    <button class="btn btn-save">Guardar</button>
+                    <button class="btn btn-cancel">Cancelar</button>
+                </div>
+            </div> -->
 
+            <!-- Vehiculos -->
+            <div v-if="show == true" class="content">
+                <fieldset class="formulary">
+                    <h3>Vehiculo</h3>
+    
+                    <hr size="2px">
+    
+                    <div class="content-p">
+                        <div class="p-100">
+                            <label for="">Empresa</label>
+                            <input class="text-box" type="text">
+                        </div>
+                    </div>
+
+                    <div class="content-p">
+                        <div class="p-m">
+                            <label for="">Marca</label>
+                            <input class="text-box" type="text">
+                        </div>
+    
+                        <div class="p-m mt-p">
+                            <label for="">Modelo</label>
+                            <input class="text-box" type="text">
+                        </div>
+                    </div>
+    
+                    <div class="content-p">
+                        <div class="p-s">
+                            <label for="">Numero Economico</label>
+                            <input class="text-box" type="tel">
+                        </div>
+    
+                        <div class="p-s mt-p">
+                            <label for="">Placasr</label>
+                            <input class="text-box" type="tel">
+                        </div>
+    
+                        <div class="p-s mt-p">
+                            <label for="">Serie</label>
+                            <input class="text-box" type="email">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="formulary">
+                    <input type="checkbox" name="" class="check-box">Seguro
+                </fieldset>   
+                
+                <fieldset class="formulary">
+                    <input type="checkbox" name="">Plan de mantenimiento
+                </fieldset>   
+
+                <fieldset class="formulary">
+                    <input type="checkbox" name="">Plan de monitoreo
+                </fieldset>   
+
+                <fieldset class="formulary">
+                    <input type="checkbox" name="">SIM
+                </fieldset>   
+            
+                <fieldset class="formulary">
+                    <input type="checkbox" name="">Claves
+                </fieldset>   
+
+                <div class="contentE-btn">
+                    <button class="btn btn-save">Guardar</button>
+                    <button class="btn btn-cancel">Cancelar</button>
+                </div>
+            </div>
         </div>
+    </div>
 
+
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="js/templates.js"></script>
     <script src="js/efects.js"></script>
 </body>
 </html>

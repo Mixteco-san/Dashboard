@@ -27,12 +27,17 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-input {
+.text-box {
     width: -webkit-fill-available;
     width: -moz-available;
     padding: .6em;
     border-radius: var(--s-5);
     border: 2px solid var(--grayBorder);;
+}
+
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
 }
 
 a, li {
@@ -57,6 +62,9 @@ a, li {
     width: 50%;;
 }
 
+.p-100 {
+    width: 100%;
+}
 .p-l {
     width: 66%;
 }
@@ -155,7 +163,7 @@ nav {
     width: 90%;
 }
 
-.btn-menu a{
+.btn-menu p{
     width: 100%;
     display: block;
     margin: var(--s-10) 0;
@@ -198,7 +206,7 @@ nav {
 
 /*           ------ pseudoclases ------              */
 
-.btn-menu a:hover{
+.btn-menu p:hover{
     background: var(--blueBtn);
     font-weight: bold;
     color: var(--white);
