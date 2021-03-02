@@ -16,7 +16,7 @@ new Vue ({
     },
 
     methods: {
-        showForm( n ) {
+        showForm(n) {
             this.checkBoxes[n].check = !this.checkBoxes[n].check
         },
     }

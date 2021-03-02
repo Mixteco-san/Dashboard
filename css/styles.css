@@ -2,7 +2,6 @@
     /* Colors */
     --black: #000000;
     --white: white;
-    --azulM: #1e3799;
     --gray: #f8f9fa;
     --grayBorder: #ced4da;
     --grayBtn: #6c757d;
@@ -35,12 +34,17 @@ body {
     border: 2px solid var(--grayBorder);;
 }
 
-[type="checkbox"]{
+input[type="checkbox"]{
     display: none;
 }
 
-[type="checkbox"]:checked + label::before {
+input[type="checkbox"]:checked + label::before {
+    font-family: 'Font Awesome 5 Free';
     background-color: var(--blueBtn);
+    content: '\f14a';
+    color: var(--white);
+    /* border: 1px solid ; */
+    font-size: 21px;
 }
 
 .label-cb {
@@ -54,14 +58,18 @@ body {
 }
 
 .label-cb::before {
-    content: '';
+    content: ' ';
     border: 1px solid var(--grayBorder);
-    border-radius: 3px;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     position: absolute;
     left: 0;
-    top: .5px;
+    top: .4px;
+    text-align: center;
+    border-radius: 3px;
+
+    transition: all 0.3s;
+    transform: rotate(0deg);
 }
 
 a, li {
