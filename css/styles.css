@@ -35,9 +35,28 @@ body {
     border: 2px solid var(--grayBorder);;
 }
 
-input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
+input[type="checkbox"]{
+    display: none;
+}
+
+.label-cb {
+    padding-left: 1.3em;
+    position: relative;
+}
+
+.label-cb h3 {
+    display: inline;
+    margin-left: .8em;
+}
+
+.label-cb:before {
+    content: ' ';
+    border: 1px solid var(--grayBorder);
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
 }
 
 a, li {
