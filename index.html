@@ -33,22 +33,22 @@
             <div class="menu">
                 <i class="fas fa-times Xclose-ico" id="btn-close"></i>
                 <ul class="content-btn-m">
-                    <li v-on:click="showForm1" class="btn-menu">
+                    <li v-on:click="showValue = 1" class="btn-menu">
                         <p>Empresa</p>
                     </li>
-                    <li v-on:click="showForm2" class="btn-menu">
+                    <li v-on:click="showValue = 2" class="btn-menu">
                         <p>Vehiculos</p>
                     </li>
-                    <li v-on:click="showForm3" class="btn-menu">
+                    <li v-on:click="showValue = 3" class="btn-menu">
                         <p>Usuarios</p>
                     </li>
-                    <li v-on:click="showForm4" class="btn-menu">
+                    <li v-on:click="showValue = 4" class="btn-menu">
                         <p>SIM</p>
                     </li>
-                    <li v-on:click="showForm5" class="btn-menu">
+                    <li v-on:click="showValue = 5" class="btn-menu">
                         <p>Mòdulos</p>
                     </li>
-                    <li v-on:click="showForm6" class="btn-menu">
+                    <li v-on:click="showValue = 6" class="btn-menu">
                         <p>Claves</p>
                     </li>
                 </ul>
@@ -184,145 +184,165 @@
                     </div>
                 </fieldset>
 
-                <fieldset class="formulary">
-                    <input type="checkbox" name="" class="check-box">Seguro
+                <!-- -----------  checkbox  ----------- -->
 
-                    <hr size="2px">
-
-                    <div class="content-p">
-                        <div class="p-100">
-                            <label for="">Compañia</label>
-                            <input class="text-box" type="text">
-                        </div>
-                    </div>
-
-                    <div class="content-p">
-                        <div class="p-s">
-                            <label for="">Numero de poliza</label>
-                            <input class="text-box" type="number">
-                        </div>
-    
-                        <div class="p-s mt-p">
-                            <label for="">Inicio de vigencia</label>
-                            <input class="text-box" type="date">
-                        </div>
-    
-                        <div class="p-s mt-p">
-                            <label for="">Fin de vigencia</label>
-                            <input class="text-box" type="date">
-                        </div>
-                    </div>
-                </fieldset>   
-                
                 <fieldset class="formulary">
                     <input type="checkbox" name="option" id="cb-1">
-                    <label for="cb-1" class="label-cb"><h3>Plan de mantenimiento</h3></label>
-                
+                    <label v-on:click="showForm( 0 )" for="cb-1" class="label-cb"><h3>Seguro</h3></label>
+
                     <hr size="2px">
 
-                    <div class="content-p">
-                        <div class="p-100">
-                            <label for="">Tipo de plan de mantenimiento</label>
-                            <input class="text-box" type="text">
+                    <div v-if="checkBoxes[0].check">
+                        <div class="content-p">
+                            <div class="p-100">
+                                <label for="">Compañia</label>
+                                <input class="text-box" type="text">
+                            </div>
+                        </div>
+    
+                        <div class="content-p">
+                            <div class="p-s">
+                                <label for="">Numero de poliza</label>
+                                <input class="text-box" type="number">
+                            </div>
+        
+                            <div class="p-s mt-p">
+                                <label for="">Inicio de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+        
+                            <div class="p-s mt-p">
+                                <label for="">Fin de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="content-p">
-                        <div class="p-m">
-                            <label for="">Inicio de vigencia</label>
-                            <input class="text-box" type="date">
+                </fieldset>   
+                
+                <fieldset class="formulary">
+                    <input type="checkbox" name="option" id="cb-2">
+                    <label v-on:click="showForm( 1 )" for="cb-2" class="label-cb"><h3>Plan de mantenimiento</h3></label>
+                
+                    <hr size="2px">
+
+                    <div v-if="checkBoxes[1].check">   
+                        <div class="content-p">
+                            <div class="p-100">
+                                <label for="">Tipo de plan de mantenimiento</label>
+                                <input class="text-box" type="text">
+                            </div>
                         </div>
     
-                        <div class="p-m mt-p">
-                            <label for="">Fin de vigencia</label>
-                            <input class="text-box" type="date">
+                        <div class="content-p">
+                            <div class="p-m">
+                                <label for="">Inicio de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+        
+                            <div class="p-m mt-p">
+                                <label for="">Fin de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>   
+
+                <fieldset class="formulary">
+                    <input type="checkbox" name="option" id="cb-3">
+                    <label v-on:click="showForm( 2 )" for="cb-3" class="label-cb"><h3>Plan de monitoreo</h3></label>
+
+                    <hr size="2px">
+
+                    <div v-if="checkBoxes[2].check">
+                        <div class="content-p">
+                            <div class="p-100">
+                                <label for="">Tipo de plan de monitoreo</label>
+                                <input class="text-box" type="text">
+                            </div>
+                        </div>
+    
+                        <div class="content-p">
+                            <div class="p-m">
+                                <label for="">Inicio de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+        
+                            <div class="p-m mt-p">
+                                <label for="">Fin de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
                         </div>
                     </div>
                 </fieldset>   
 
                 <fieldset class="formulary">
-                    <input type="checkbox" name="">Plan de monitoreo
+                    <input type="checkbox" name="option" id="cb-4">
+                    <label v-on:click="showForm( 3 )" for="cb-4" class="label-cb"><h3>SIM</h3></label>
 
                     <hr size="2px">
 
-                    <div class="content-p">
-                        <div class="p-100">
-                            <label for="">Tipo de plan de monitoreo</label>
-                            <input class="text-box" type="text">
+                    <div v-if="checkBoxes[3].check">
+                        <div class="content-p">
+                            <div class="p-s">
+                                <label for="">Serie</label>
+                                <input class="text-box" type="text">
+                            </div>
+                    
+                            <div class="p-s mt-p">
+                                <label for="">Inicio de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+        
+                            <div class="p-s mt-p">
+                                <label for="">Fin de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="content-p">
-                        <div class="p-m">
-                            <label for="">Inicio de vigencia</label>
-                            <input class="text-box" type="date">
-                        </div>
-    
-                        <div class="p-m mt-p">
-                            <label for="">Fin de vigencia</label>
-                            <input class="text-box" type="date">
-                        </div>
-                    </div>
-                </fieldset>   
-
-                <fieldset class="formulary">
-                    <input type="checkbox" name="">SIM
-
-                    <hr size="2px">
-
-                    <div class="content-p">
-                        <div class="p-s">
-                            <label for="">Serie</label>
-                            <input class="text-box" type="text">
-                        </div>
-                
-                        <div class="p-s mt-p">
-                            <label for="">Inicio de vigencia</label>
-                            <input class="text-box" type="date">
-                        </div>
-    
-                        <div class="p-s mt-p">
-                            <label for="">Fin de vigencia</label>
-                            <input class="text-box" type="date">
-                        </div>
-                    </div>
                 </fieldset>   
             
                 <fieldset class="formulary">
-                    <input type="checkbox" name="">Claves
+                    <input type="checkbox" name="option" id="cb-5">
+                    <label v-on:click="showForm( 4 )" for="cb-5" class="label-cb"><h3>Claves</h3></label>
 
                     <hr size="2px">
 
-                    <div class="content-p">
-                        <div class="p-100">
-                            <label for="">Modulo</label>
-                            <input class="text-box" type="text">
+                    <div v-if="checkBoxes[4].check">
+                        <div class="content-p">
+                            <div class="p-100">
+                                <label for="">Modulo</label>
+                                <input class="text-box" type="text">
+                            </div>
+                        </div>
+    
+                        <div class="content-p">
+                            <div class="p-m">
+                                <label for="">Mascara</label>
+                                <input class="text-box" type="number">
+                            </div>
+        
+                            <div class="p-m mt-p">
+                                <label for="">Lote</label>
+                                <input class="text-box" type="number">
+                            </div>
+                        </div>
+    
+                        <div class="content-p">
+                            <div class="p-m">
+                                <label for="">Inicio de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+        
+                            <div class="p-m mt-p">
+                                <label for="">Fin de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="content-p">
-                        <div class="p-m">
-                            <label for="">Mascara</label>
-                            <input class="text-box" type="number">
-                        </div>
-    
-                        <div class="p-m mt-p">
-                            <label for="">Lote</label>
-                            <input class="text-box" type="number">
-                        </div>
-                    </div>
-
-                    <div class="content-p">
-                        <div class="p-m">
-                            <label for="">Inicio de vigencia</label>
-                            <input class="text-box" type="date">
-                        </div>
-    
-                        <div class="p-m mt-p">
-                            <label for="">Fin de vigencia</label>
-                            <input class="text-box" type="date">
-                        </div>
-                    </div>
                 </fieldset>   
 
                 <div class="contentE-btn">

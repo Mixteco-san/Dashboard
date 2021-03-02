@@ -3,30 +3,21 @@ new Vue ({
     
     data() {
         return {
-            title: "Que onda",
-
-            showValue: 0
+            show: false,
+            showValue: 0,
+            checkBoxes: [
+                {check: false},
+                {check: false},
+                {check: false},
+                {check: false},
+                {check: false}
+            ]
         }
     },
 
     methods: {
-        showForm1() {
-            this.showValue = 1 
+        showForm( n ) {
+            this.checkBoxes[n].check = !this.checkBoxes[n].check
         },
-        showForm2() {
-            this.showValue = 2 
-        },
-        showForm3() {
-            this.showValue = 3 
-        },
-        showForm4() {
-            this.showValue = 4 
-        },
-        showForm5() {
-            this.showValue = 5 
-        },
-        showForm6() {
-            this.showValue = 6 
-        }
     }
 })
