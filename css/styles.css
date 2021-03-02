@@ -162,7 +162,7 @@ nav {
 
 /*           ------ container ------              */
 .dash-container {
-    width: 100vw;;
+    width: 100vw;
     padding: var(--s-10);
     display: flex;
     box-sizing: border-box;
