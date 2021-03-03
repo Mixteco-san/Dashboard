@@ -2,7 +2,6 @@
     /* Colors */
     --black: #000000;
     --white: white;
-    --azulM: #1e3799;
     --gray: #f8f9fa;
     --grayBorder: #ced4da;
     --grayBtn: #6c757d;
@@ -27,11 +26,50 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-input {
+.text-box {
     width: -webkit-fill-available;
+    width: -moz-available;
     padding: .6em;
     border-radius: var(--s-5);
     border: 2px solid var(--grayBorder);;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked + label::before {
+    font-family: 'Font Awesome 5 Free';
+    background-color: var(--blueBtn);
+    content: '\f14a';
+    color: var(--white);
+    /* border: 1px solid ; */
+    font-size: 21px;
+}
+
+.label-cb {
+    padding-left: 1.3em;
+    position: relative;
+}
+
+.label-cb h3 {
+    display: inline;
+    margin-left: .8em;
+}
+
+.label-cb::before {
+    content: ' ';
+    border: 1px solid var(--grayBorder);
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 0;
+    top: .4px;
+    text-align: center;
+    border-radius: 3px;
+
+    transition: all 0.3s;
+    transform: rotate(0deg);
 }
 
 a, li {
@@ -56,6 +94,9 @@ a, li {
     width: 50%;;
 }
 
+.p-100 {
+    width: 100%;
+}
 .p-l {
     width: 66%;
 }
@@ -121,7 +162,7 @@ nav {
 
 /*           ------ container ------              */
 .dash-container {
-    width: 100vw;;
+    width: 100vw;
     padding: var(--s-10);
     display: flex;
     box-sizing: border-box;
@@ -154,7 +195,7 @@ nav {
     width: 90%;
 }
 
-.btn-menu a{
+.btn-menu p{
     width: 100%;
     display: block;
     margin: var(--s-10) 0;
@@ -197,7 +238,7 @@ nav {
 
 /*           ------ pseudoclases ------              */
 
-.btn-menu a:hover{
+.btn-menu p:hover{
     background: var(--blueBtn);
     font-weight: bold;
     color: var(--white);

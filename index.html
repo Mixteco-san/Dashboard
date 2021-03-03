@@ -13,133 +13,350 @@
     <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
-    <!-- Nav -->
-    <nav class="nav">
-        <i class="fas fa-bars burger-btn" id="btn-burger"></i>
-
-        <div class="logo">
-            <a href=""><h1>Logo</h1></a>
-        </div>
-
-        <div class="login">
-            <i class="fas fa-user-cog user-ico"></i>
-            <p>Administrador</p>
-        </div>
-    </nav>
-
-    <!-- container -->
-    <div class="dash-container">
-        <div class="menu">
-            <i class="fas fa-times Xclose-ico" id="btn-close"></i>
-            <ul class="content-btn-m">
-                <li class="btn-menu">
-                    <a href="">Empresa</a>
-                </li>
-                <li class="btn-menu">
-                    <a href="">Vehiculos</a>
-                </li>
-                <li class="btn-menu">
-                    <a href="">Usuarios</a>
-                </li>
-                <li class="btn-menu">
-                    <a href="">SIM</a>
-                </li>
-                <li class="btn-menu">
-                    <a href="">Mòdulos</a>
-                </li>
-                <li class="btn-menu">
-                    <a href="">Claves</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Empresa -->
-        <div class="content">
-            <fieldset class="formulary">
-                <h3>Empresa</h3>
-
-                <hr size="2px">
-
-                <div class="content-p">
-                    <div class="p-m">
-                        <label for="">Nombre</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="p-m mt-p">
-                        <label for="">Contacto</label>
-                        <input type="text">
-                    </div>
-                </div>
-
-                <div class="content-p">
-                    <div class="p-s">
-                        <label for="">Telefono</label>
-                        <input type="tel">
-                    </div>
-
-                    <div class="p-s mt-p">
-                        <label for="">Celular</label>
-                        <input type="tel">
-                    </div>
-
-                    <div class="p-s mt-p">
-                        <label for="">Correo</label>
-                        <input type="email">
-                    </div>
-                </div>
-                
-                
-            </fieldset>
-            
-            <fieldset class="formulary">
-                <h3>Dirección</h3>
-                
-                <hr size="2px">
-                
-                <div class="content-p">
-                    <div class="p-l">
-                        <label for="">Calle</label>
-                        <input type="text">
-                    </div>
-                    <div class="p-s mt-p">
-                        <label for="">Numero</label>
-                        <input type="number">
-                    </div>
-                </div>
-
-                <div class="content-p">
-                    <div class="p-m">
-                        <label for="">Colonia</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="p-m mt-p">
-                        <label for="">Municipio</label>
-                        <input type="text">
-                    </div>
-                </div>
-
-                <div class="content-p">
-                    <div class="p-l">
-                        <label for="">Estado</label>
-                        <input type="text">
-                    </div>
-
-                    <div class="p-s mt-p">
-                        <label for="">C.P.</label>
-                        <input type="email">
-                </div>
-
-            </fieldset>
-
-            <div class="contentE-btn">
-                <button class="btn btn-save">Guardar</button>
-                <button class="btn btn-cancel">Cancelar</button>
+    <div id="app">
+        <!-- Nav -->
+        <nav class="nav">
+            <i class="fas fa-bars burger-btn" id="btn-burger"></i>
+    
+            <div class="logo">
+                <a href=""><h1>Logo</h1></a>
+            </div>
+    
+            <div class="login">
+                <i class="fas fa-user-cog user-ico"></i>
+                <p>Administrador</p>
+            </div>
+        </nav>
+    
+        <!-- container -->
+        <div class="dash-container">
+            <div class="menu">
+                <i class="fas fa-times Xclose-ico" id="btn-close"></i>
+                <ul class="content-btn-m">
+                    <li v-on:click="showValue = 1" class="btn-menu">
+                        <p>Empresa</p>
+                    </li>
+                    <li v-on:click="showValue = 2" class="btn-menu">
+                        <p>Vehiculos</p>
+                    </li>
+                    <li v-on:click="showValue = 3" class="btn-menu">
+                        <p>Usuarios</p>
+                    </li>
+                    <li v-on:click="showValue = 4" class="btn-menu">
+                        <p>SIM</p>
+                    </li>
+                    <li v-on:click="showValue = 5" class="btn-menu">
+                        <p>Mòdulos</p>
+                    </li>
+                    <li v-on:click="showValue = 6" class="btn-menu">
+                        <p>Claves</p>
+                    </li>
+                </ul>
             </div>
 
-        </div>
+            <!-- -------------- Empresa -------------- -->
+            <div v-if="showValue == 1" class="content">
+                <fieldset class="formulary">
+                    <h3>Empresa</h3>
+    
+                    <hr size="2px">
+    
+                    <div class="content-p">
+                        <div class="p-m">
+                            <label for="">Nombre</label>
+                            <input class="text-box" type="text">
+                        </div>
+    
+                        <div class="p-m mt-p">
+                            <label for="">Contacto</label>
+                            <input class="text-box" type="text">
+                        </div>
+                    </div>
+    
+                    <div class="content-p">
+                        <div class="p-s">
+                            <label for="">Telefono</label>
+                            <input class="text-box" type="tel">
+                        </div>
+    
+                        <div class="p-s mt-p">
+                            <label for="">Celular</label>
+                            <input class="text-box" type="tel">
+                        </div>
+    
+                        <div class="p-s mt-p">
+                            <label for="">Correo</label>
+                            <input class="text-box" type="email">
+                        </div>
+                    </div>
+                    
+                    
+                </fieldset>
+                
+                <fieldset class="formulary">
+                    <h3>Direccion</h3>
+                    
+                    <hr size="2px">
+                    
+                    <div class="content-p">
+                        <div class="p-l">
+                            <label for="">Calle</label>
+                            <input class="text-box" type="text">
+                        </div>
+                        <div class="p-s mt-p">
+                            <label for="">Numero</label>
+                            <input class="text-box" type="number">
+                        </div>
+                    </div>
+    
+                    <div class="content-p">
+                        <div class="p-m">
+                            <label for="">Colonia</label>
+                            <input class="text-box" type="text">
+                        </div>
+    
+                        <div class="p-m mt-p">
+                            <label for="">Municipio</label>
+                            <input class="text-box" type="text">
+                        </div>
+                    </div>
+    
+                    <div class="content-p">
+                        <div class="p-l">
+                            <label for="">Estado</label>
+                            <input class="text-box" type="text">
+                        </div>
+    
+                        <div class="p-s mt-p">
+                            <label for="">C.P.</label>
+                            <input class="text-box" type="email">
+                    </div>
+    
+                </fieldset>
+    
+                <div class="contentE-btn">
+                    <button class="btn btn-save">Guardar</button>
+                    <button class="btn btn-cancel">Cancelar</button>
+                </div>
+            </div>
 
+            <!--  ------------- Vehiculos --------------  -->
+            <div v-else-if="showValue == 2" class="content">
+                <fieldset class="formulary">
+                    <h3>Vehiculo</h3>
+    
+                    <hr size="2px">
+    
+                    <div class="content-p">
+                        <div class="p-100">
+                            <label for="">Empresa</label>
+                            <input class="text-box" type="text">
+                        </div>
+                    </div>
+
+                    <div class="content-p">
+                        <div class="p-m">
+                            <label for="">Marca</label>
+                            <input class="text-box" type="text">
+                        </div>
+    
+                        <div class="p-m mt-p">
+                            <label for="">Modelo</label>
+                            <input class="text-box" type="text">
+                        </div>
+                    </div>
+    
+                    <div class="content-p">
+                        <div class="p-s">
+                            <label for="">Numero Economico</label>
+                            <input class="text-box" type="number">
+                        </div>
+    
+                        <div class="p-s mt-p">
+                            <label for="">Placas</label>
+                            <input class="text-box" type="text">
+                        </div>
+    
+                        <div class="p-s mt-p">
+                            <label for="">Serie</label>
+                            <input class="text-box" type="text">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- -----------  checkbox  ----------- -->
+
+                <fieldset class="formulary">
+                    <input type="checkbox" name="option" id="cb-1">
+                    <label v-on:click="showForm( 0 )" for="cb-1" class="label-cb"><h3>Seguro</h3></label>
+
+                    <hr size="2px">
+
+                    <div v-if="checkBoxes[0].check">
+                        <div class="content-p">
+                            <div class="p-100">
+                                <label for="">Compañia</label>
+                                <input class="text-box" type="text">
+                            </div>
+                        </div>
+    
+                        <div class="content-p">
+                            <div class="p-s">
+                                <label for="">Numero de poliza</label>
+                                <input class="text-box" type="number">
+                            </div>
+        
+                            <div class="p-s mt-p">
+                                <label for="">Inicio de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+        
+                            <div class="p-s mt-p">
+                                <label for="">Fin de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>   
+                
+                <fieldset class="formulary">
+                    <input type="checkbox" name="option" id="cb-2">
+                    <label v-on:click="showForm( 1 )" for="cb-2" class="label-cb"><h3>Plan de mantenimiento</h3></label>
+                
+                    <hr size="2px">
+
+                    <div v-if="checkBoxes[1].check">   
+                        <div class="content-p">
+                            <div class="p-100">
+                                <label for="">Tipo de plan de mantenimiento</label>
+                                <input class="text-box" type="text">
+                            </div>
+                        </div>
+    
+                        <div class="content-p">
+                            <div class="p-m">
+                                <label for="">Inicio de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+        
+                            <div class="p-m mt-p">
+                                <label for="">Fin de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>   
+
+                <fieldset class="formulary">
+                    <input type="checkbox" name="option" id="cb-3">
+                    <label v-on:click="showForm( 2 )" for="cb-3" class="label-cb"><h3>Plan de monitoreo</h3></label>
+
+                    <hr size="2px">
+
+                    <div v-if="checkBoxes[2].check">
+                        <div class="content-p">
+                            <div class="p-100">
+                                <label for="">Tipo de plan de monitoreo</label>
+                                <input class="text-box" type="text">
+                            </div>
+                        </div>
+    
+                        <div class="content-p">
+                            <div class="p-m">
+                                <label for="">Inicio de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+        
+                            <div class="p-m mt-p">
+                                <label for="">Fin de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>   
+
+                <fieldset class="formulary">
+                    <input type="checkbox" name="option" id="cb-4">
+                    <label v-on:click="showForm( 3 )" for="cb-4" class="label-cb"><h3>SIM</h3></label>
+
+                    <hr size="2px">
+
+                    <div v-if="checkBoxes[3].check">
+                        <div class="content-p">
+                            <div class="p-s">
+                                <label for="">Serie</label>
+                                <input class="text-box" type="text">
+                            </div>
+                    
+                            <div class="p-s mt-p">
+                                <label for="">Inicio de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+        
+                            <div class="p-s mt-p">
+                                <label for="">Fin de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>   
+            
+                <fieldset class="formulary">
+                    <input type="checkbox" name="option" id="cb-5">
+                    <label v-on:click="showForm( 4 )" for="cb-5" class="label-cb"><h3>Claves</h3></label>
+
+                    <hr size="2px">
+
+                    <div v-if="checkBoxes[4].check">
+                        <div class="content-p">
+                            <div class="p-100">
+                                <label for="">Modulo</label>
+                                <input class="text-box" type="text">
+                            </div>
+                        </div>
+    
+                        <div class="content-p">
+                            <div class="p-m">
+                                <label for="">Mascara</label>
+                                <input class="text-box" type="number">
+                            </div>
+        
+                            <div class="p-m mt-p">
+                                <label for="">Lote</label>
+                                <input class="text-box" type="number">
+                            </div>
+                        </div>
+    
+                        <div class="content-p">
+                            <div class="p-m">
+                                <label for="">Inicio de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+        
+                            <div class="p-m mt-p">
+                                <label for="">Fin de vigencia</label>
+                                <input class="text-box" type="date">
+                            </div>
+                        </div>
+                    </div>
+
+                </fieldset>   
+
+                <div class="contentE-btn">
+                    <button class="btn btn-save">Guardar</button>
+                    <button class="btn btn-cancel">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="js/templates.js"></script>
     <script src="js/efects.js"></script>
 </body>
 </html>
